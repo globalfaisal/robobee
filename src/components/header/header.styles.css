@@ -1,0 +1,28 @@
+header {
+	height: 100vh;
+	height: 100vh;
+	background-image: linear-gradient(rgba(36, 35, 43, 1), rgba(0, 0, 0, 0.75)), url('../../assets/images/hero.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.hero-logo {
+	width: 150px;
+	height: 150px;
+}
+.hero-heading {
+	margin-top: 16px;
+	background: -webkit-linear-gradient(var(--color-white) 0%, var(--color-black1) 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: var(--color-white);
+}
