@@ -112,3 +112,21 @@ a {
 .cool-link:hover {
 	background-size: 100% 2px;
 }
+
+.scroll-link:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+@keyframes arrow-jump {
+	0% {
+		opacity: 0;
+		transform: translateY(0px);
+		color: var(--color-white);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(10px);
+		color: var(--color-primary);
+	}
+}
