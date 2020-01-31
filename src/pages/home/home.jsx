@@ -1,16 +1,13 @@
-/* --- libs ---*/
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-/* --- component ---*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Logo } from '../logo/logo.component';
+import { Logo } from '../../components/logo/logo';
 
-/* --- fa ---*/
-/* --- styles ---*/
-import './header.styles.css';
+import './home.css';
 
-export const Header = () => (
-  <header className="header">
+export const Home = () => (
+  <header className="home-page">
     <div className="hero">
       <div className="hero-logo">
         <Logo />
@@ -19,9 +16,9 @@ export const Header = () => (
         Robots there’s more to
         <br /> them than meets the eye.
       </h2>
-      <a href="#" className="scroll-link">
+      <Link to="#intro-section" className="scroll-link">
         <FontAwesomeIcon icon="long-arrow-alt-down" size="2x" />
-      </a>
+      </Link>
     </div>
   </header>
 );

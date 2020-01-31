@@ -1,7 +1,5 @@
-/* --- libs ---*/
 import React from 'react';
 
-/* --- styles ---*/
-import './logo.styles.css';
+import './logo.css';
 
 export const Logo = () => <div className="logo" />;

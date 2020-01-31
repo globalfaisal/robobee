@@ -1,15 +1,14 @@
-/* --- libs ---*/
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-/* --- components ---*/
-import { Header } from './components/header/header.component';
+import { Home } from './pages/home/home';
 
 class App extends Component {
   render() {
     return (
-      <div className="app-container">
-        <Header />
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
     );
   }
 }

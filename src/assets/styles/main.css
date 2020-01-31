@@ -113,20 +113,48 @@ a {
 	background-size: 100% 2px;
 }
 
+.scroll-link {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(-50%);
+	animation: arrow-jump 2s infinite;
+}
 .scroll-link:hover {
 	animation-play-state: paused;
 	cursor: pointer;
+	opacity: 1;
+	color: var(--color-white);
+}
+.scroll-link::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--color-primary);
+	border-radius: 50%;
+	opacity: 0.18;
+}
+.scroll-link:hover::after {
+	background-color: var(--color-primary);
+	opacity: 0.25;
 }
 
 @keyframes arrow-jump {
 	0% {
 		opacity: 0;
 		transform: translateY(0px);
-		color: var(--color-white);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(10px);
-		color: var(--color-primary);
+		transform: translateY(8px);
 	}
 }

@@ -1,4 +1,4 @@
-header {
+.home-page {
 	height: 100vh;
 	height: 100vh;
 	background-image: linear-gradient(rgba(36, 35, 43, 1), rgba(0, 0, 0, 0.75)), url('../../assets/images/hero.jpg');
@@ -7,7 +7,7 @@ header {
 	background-repeat: no-repeat;
 }
 
-header .hero {
+.home-page .hero {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -16,23 +16,14 @@ header .hero {
 	height: 100%;
 	position: relative;
 }
-header .hero-logo {
+.home-page .hero-logo {
 	width: 150px;
 	height: 150px;
 }
-header .hero-heading {
+.home-page .hero-heading {
 	margin-top: 16px;
 	background: -webkit-linear-gradient(var(--color-white) 0%, var(--color-black1) 100%);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: var(--color-white);
-}
-
-header .scroll-link {
-	position: absolute;
-	color: var(--color-white);
-	bottom: 30px;
-	left: 50%;
-	transform: translateX(-50%);
-	animation: arrow-jump 2s infinite;
 }

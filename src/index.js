@@ -1,23 +1,27 @@
-/* --- libs ---*/
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-/* --- styles ---*/
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import './assets/styles/main.css';
 
-/* --- components ---*/
 import App from './App';
 
-/* --- service worker ---*/
+import history from './utils/history';
+
 import * as serviceWorker from './serviceWorker';
 
 // add all fontawesome solid icons to the library
 library.add(fas);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Router history={history}>
+    <App />
+  </Router>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
