@@ -13,6 +13,7 @@
 		],
 		"no-var": "error",
 		"no-console": "warn",
-		"jsx-a11y/anchor-is-valid": "off"
+		"react/prop-types": "warn",
+		"jsx-a11y/anchor-is-valid": "warn"
 	}
 }

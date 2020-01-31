@@ -31,10 +31,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.app-container {
-	min-height: 100vh;
-}
-
 h1,
 h2,
 h3,
@@ -47,7 +43,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: 'Roboto', 'Tahoma', 'Geneva', sans-serif;
+	font-family: 'Roboto Mono', Consolas, Monaco, monospace;
 	line-height: 1.1;
 	color: var(--color-purple);
 }
@@ -99,6 +95,14 @@ a {
 	text-decoration: none;
 }
 
+.container {
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
 .cool-link {
 	font-weight: 500;
 	text-decoration: none;
@@ -111,22 +115,4 @@ a {
 }
 .cool-link:hover {
 	background-size: 100% 2px;
-}
-
-.scroll-link:hover {
-	animation-play-state: paused;
-	cursor: pointer;
-}
-
-@keyframes arrow-jump {
-	0% {
-		opacity: 0;
-		transform: translateY(0px);
-		color: var(--color-white);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(10px);
-		color: var(--color-primary);
-	}
 }
