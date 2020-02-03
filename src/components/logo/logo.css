@@ -4,7 +4,5 @@
 	position: relative;
 	background: url('../../assets/images/logo-white.svg') center center no-repeat;
 	background-size: 98%;
-	border-top: 4px solid #fffffa;
-	border-bottom: 30px dashed var(--color-white);
 	border-radius: 50%;
 }

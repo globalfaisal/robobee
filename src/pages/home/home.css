@@ -1,7 +1,8 @@
 .home-page {
 	height: 100vh;
 	height: 100vh;
-	background-image: linear-gradient(rgba(36, 35, 43, 1), rgba(0, 0, 0, 0.5)), url('../../assets/images/hero.jpg');
+	background-image: linear-gradient(to top, rgba(255, 82, 82, 0.1), rgba(234, 56, 77, 0.175)),
+		url('../../assets/images/hero.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -22,9 +23,6 @@
 }
 .home-page .heading {
 	margin-top: 16px;
-	background: linear-gradient(var(--color-white) 0%, var(--color-black1) 100%);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
 	color: var(--color-white);
 }
 

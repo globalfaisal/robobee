@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './input-box.css';
 import clsx from 'clsx';
 
-const InputBox = ({ value = '', onChange, onSubmit }) => (
-  <form noValidate onSubmit={onSubmit} className="form">
+const InputBox = ({ value = '', onChange, onSubmit, loading = false }) => (
+  <form noValidate onSubmit={onSubmit} className="form" disabled={loading}>
     <div className="form-controller">
       <input
         type="text"
@@ -16,7 +16,7 @@ const InputBox = ({ value = '', onChange, onSubmit }) => (
         className="input"
         value={value}
         onChange={onChange}
-        placeholder="Try on your name, or any text "
+        placeholder="What should we name the robot?"
       />
       <button
         type="submit"
@@ -34,6 +34,7 @@ const InputBox = ({ value = '', onChange, onSubmit }) => (
 
 InputBox.propTypes = {
   value: PropTypes.string.isRequired,
+  loading: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };

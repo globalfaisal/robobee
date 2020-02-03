@@ -1,37 +1,84 @@
 import React, { Component } from 'react';
 
-import './create-robot.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import InputBox from '../input-box/input-box';
+import Card from '../card/card';
+
+import './create-robot.css';
+import clsx from 'clsx';
 
 class CreateRobot extends Component {
   constructor() {
     super();
     this.state = {
-      searchTerm: '',
+      robotImgUrl: '',
+      inputValue: '',
+      error: false,
+      loading: false,
     };
   }
 
+  componentDidMount() {
+    this.getRobotImage('default');
+  }
+
+  getRobotImage = value => {
+    this.setState(state => ({
+      ...state,
+      error: false,
+      loading: true,
+    }));
+    fetch(`https://robohash.org/${value}?size=300x300`, {
+      mode: 'no-cors', // 'cors' by default
+    })
+      .then(() => {
+        console.log('here');
+        this.setState(state => ({
+          ...state,
+          robotImgUrl: `https://robohash.org/${value}?size=300x300`,
+          error: false,
+          loading: false,
+        }));
+      })
+      .catch(err =>
+        this.setState(state => ({ ...state, error: true, loading: false }))
+      );
+  };
+
   handleSearchChange = e => {
-    this.setState({ searchTerm: e.target.value });
+    e.persist();
+    this.setState(state => ({ ...state, inputValue: e.target.value }));
   };
 
   handleSearchSubmit = e => {
     e.preventDefault();
-    const { searchTerm } = this.state;
-    console.log(searchTerm);
+    const { inputValue } = this.state;
+    this.getRobotImage(inputValue);
   };
 
   render() {
-    const { searchTerm } = this.state;
+    const { inputValue, robotImgUrl, loading, error } = this.state;
     return (
       <div className="create-robot">
         <div className="container">
-          <h3 className="title">GENERATE UNIQUE ROBOTS</h3>
+          <div className="title">
+            <FontAwesomeIcon icon="robot" className="title-icon" />
+            <h3 className="title">GENERATE UNIQUE ROBOTS</h3>
+          </div>
           <InputBox
-            value={searchTerm}
+            value={inputValue}
             onChange={this.handleSearchChange}
             onSubmit={this.handleSearchSubmit}
+            loading={loading}
           />
+          {loading && <p className="loading-message">Loading...</p>}
+          {error && (
+            <p className="error-message">
+              Oops! No robot wants to be called that name. <br /> Try with a
+              different name
+            </p>
+          )}
+          {!error && robotImgUrl && <Card imgSrc={robotImgUrl} />}
         </div>
       </div>
     );
