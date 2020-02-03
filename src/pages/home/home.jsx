@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from '../../components/logo/logo';
 import SectionLink from '../../components/section-link/section-link';
-import Features from '../features/features';
+import CreateRobot from '../../components/create-robot/create-robot';
 
 import './home.css';
 
@@ -14,9 +14,11 @@ const Home = () => (
         Robots there’s more to
         <br /> them than meets the eye.
       </h2>
-      <SectionLink targetSectionId="features" />
+      <SectionLink targetSectionId="section-demo" />
     </header>
-    <Features />
+    <section id="section-demo">
+      <CreateRobot />
+    </section>
   </div>
 );
 export default Home;
