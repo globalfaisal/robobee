@@ -1,22 +1,34 @@
 import React from 'react';
+import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './input-box.css';
-import clsx from 'clsx';
 
-const InputBox = ({ value = '', onChange, onSubmit, loading = false }) => (
-  <form noValidate onSubmit={onSubmit} className="form" disabled={loading}>
+const InputBox = ({
+  onChange,
+  onSubmit,
+  value = '',
+  type,
+  placeholder,
+  loading = false,
+}) => (
+  <form
+    noValidate
+    onSubmit={onSubmit}
+    className={clsx('form', loading && 'loading')}
+    disabled={loading}
+  >
     <div className="form-controller">
       <input
-        type="text"
+        type={type || 'text'}
         name="searchInput"
         id="searchInput"
         className="input"
         value={value}
         onChange={onChange}
-        placeholder="What should we name the robot?"
+        placeholder={placeholder || ''}
       />
       <button
         type="submit"
@@ -33,10 +45,12 @@ const InputBox = ({ value = '', onChange, onSubmit, loading = false }) => (
 );
 
 InputBox.propTypes = {
-  value: PropTypes.string.isRequired,
-  loading: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['text', 'search']),
+  placeholder: PropTypes.string,
+  loading: PropTypes.bool,
 };
 
 export default InputBox;

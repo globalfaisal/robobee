@@ -5,7 +5,6 @@ import InputBox from '../input-box/input-box';
 import Card from '../card/card';
 
 import './create-robot.css';
-import clsx from 'clsx';
 
 class CreateRobot extends Component {
   constructor() {
@@ -19,7 +18,7 @@ class CreateRobot extends Component {
   }
 
   componentDidMount() {
-    this.getRobotImage('default');
+    this.getRobotImage('Robobee');
   }
 
   getRobotImage = value => {
@@ -32,7 +31,6 @@ class CreateRobot extends Component {
       mode: 'no-cors', // 'cors' by default
     })
       .then(() => {
-        console.log('here');
         this.setState(state => ({
           ...state,
           robotImgUrl: `https://robohash.org/${value}?size=300x300`,
@@ -69,9 +67,10 @@ class CreateRobot extends Component {
             value={inputValue}
             onChange={this.handleSearchChange}
             onSubmit={this.handleSearchSubmit}
+            type="search"
+            placeholder="Write anything..."
             loading={loading}
           />
-          {loading && <p className="loading-message">Loading...</p>}
           {error && (
             <p className="error-message">
               Oops! No robot wants to be called that name. <br /> Try with a

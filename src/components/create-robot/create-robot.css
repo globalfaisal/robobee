@@ -16,10 +16,9 @@
 .create-robot .title-icon {
 	margin-bottom: 12px;
 	font-size: 42px;
-	animation: spin 3.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+	animation: spin 8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate;
 }
-.create-robot .error-message,
-.create-robot .loading-message {
+.create-robot .error-message {
 	text-align: center;
 	letter-spacing: -2px;
 	color: var(--color-primary);
@@ -27,7 +26,10 @@
 
 @keyframes spin {
 	0% {
-		transform: rotate(none);
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(360deg);
 	}
 	100% {
 		transform: rotate(360deg);

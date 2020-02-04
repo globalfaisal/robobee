@@ -1,16 +1,18 @@
 /*------- Base Styles -------*/
 :root {
 	--color-primary: #ff5252;
+	--color-primary-light: #facccc;
 	--color-secondary: #faedca;
 	--color-blue: #aff4f7;
 	--color-purple: #c3c4db;
 
-	--color-lightgray: #e4e1e1dc;
+	--color-lightgray: #7e7575dc;
 	--color-white: #fffffa;
 	--color-gray: #888888;
 	--color-black1: #24232b;
 	--color-black2: #282c34;
 }
+
 *,
 *::before,
 *::after {
