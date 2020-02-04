@@ -37,10 +37,7 @@ const SearchBox = ({
       >
         <FontAwesomeIcon
           icon="long-arrow-alt-right"
-          className={clsx(
-            'search-submit-icon',
-            value.trim() !== '' && 'animate'
-          )}
+          className="search-submit-icon"
         />
       </button>
     </div>
