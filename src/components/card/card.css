@@ -1,7 +1,7 @@
 .card {
 	overflow: hidden;
-	background: linear-gradient(to top, #ff5252, #ea384d);
-	border: 2px solid var(--color-primary);
+	background: linear-gradient(to bottom, #df8787, #ff5252);
+	border: 3px solid var(--color-primary);
 	height: 380px;
 	width: 100%;
 	margin-top: 22px;

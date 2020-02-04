@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import './input-box.css';
+import './search-box.css';
 
-const InputBox = ({
-  onChange,
-  onSubmit,
+const SearchBox = ({
+  onSearchChange,
+  onSearchSubmit,
   value = '',
   type,
   placeholder,
@@ -16,41 +16,44 @@ const InputBox = ({
 }) => (
   <form
     noValidate
-    onSubmit={onSubmit}
-    className={clsx('form', loading && 'loading')}
+    onSubmit={onSearchSubmit}
+    className={clsx('search-box form', loading && 'loading')}
     disabled={loading}
   >
-    <div className="form-controller">
+    <div className="search-box-control">
       <input
         type={type || 'text'}
         name="searchInput"
         id="searchInput"
-        className="input"
+        className="search-input"
         value={value}
-        onChange={onChange}
+        onChange={onSearchChange}
         placeholder={placeholder || ''}
       />
       <button
         type="submit"
         disabled={value.trim() === ''}
-        className="btn-submit"
+        className="search-submit-btn"
       >
         <FontAwesomeIcon
           icon="long-arrow-alt-right"
-          className={clsx('input-icon', value.trim() !== '' && 'animate')}
+          className={clsx(
+            'search-submit-icon',
+            value.trim() !== '' && 'animate'
+          )}
         />
       </button>
     </div>
   </form>
 );
 
-InputBox.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+SearchBox.propTypes = {
+  onSearchChange: PropTypes.func.isRequired,
+  onSearchSubmit: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['text', 'search']),
   placeholder: PropTypes.string,
   loading: PropTypes.bool,
 };
 
-export default InputBox;
+export default SearchBox;

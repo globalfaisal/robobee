@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import InputBox from '../input-box/input-box';
+import SearchBox from '../search-box/search-box';
 import Card from '../card/card';
 
 import './create-robot.css';
@@ -10,52 +10,37 @@ class CreateRobot extends Component {
   constructor() {
     super();
     this.state = {
-      robotImgUrl: '',
-      inputValue: '',
-      error: false,
+      imgUrl: '',
+      searchValue: '',
       loading: false,
     };
   }
 
   componentDidMount() {
-    this.getRobotImage('Robobee');
+    this.setState({
+      imgUrl: 'https://robohash.org/skinnyRobot?size=300x300',
+      loading: false,
+    });
   }
 
-  getRobotImage = value => {
-    this.setState(state => ({
-      ...state,
-      error: false,
-      loading: true,
-    }));
-    fetch(`https://robohash.org/${value}?size=300x300`, {
-      mode: 'no-cors', // 'cors' by default
-    })
-      .then(() => {
-        this.setState(state => ({
-          ...state,
-          robotImgUrl: `https://robohash.org/${value}?size=300x300`,
-          error: false,
-          loading: false,
-        }));
-      })
-      .catch(err =>
-        this.setState(state => ({ ...state, error: true, loading: false }))
-      );
-  };
-
-  handleSearchChange = e => {
-    e.persist();
-    this.setState(state => ({ ...state, inputValue: e.target.value }));
-  };
+  componentWillUnmount() {
+    window.clearTimeout(this.timeout);
+  }
 
   handleSearchSubmit = e => {
     e.preventDefault();
-    const { inputValue } = this.state;
-    this.getRobotImage(inputValue);
+    const { searchValue } = this.state;
+    this.setState({ loading: true });
+    this.timeout = window.setTimeout(() => {
+      this.setState({
+        imgUrl: `https://robohash.org/${searchValue}?size=300x300`,
+        loading: false,
+      });
+    }, 3000);
   };
 
   render() {
-    const { inputValue, robotImgUrl, loading, error } = this.state;
+    const { searchValue, imgUrl, loading } = this.state;
     return (
       <div className="create-robot">
         <div className="container">
@@ -63,21 +48,15 @@ class CreateRobot extends Component {
             <FontAwesomeIcon icon="robot" className="title-icon" />
             <h3 className="title">GENERATE UNIQUE ROBOTS</h3>
           </div>
-          <InputBox
-            value={inputValue}
-            onChange={this.handleSearchChange}
-            onSubmit={this.handleSearchSubmit}
+          <SearchBox
             type="search"
+            value={searchValue}
+            onSearchChange={e => this.setState({ searchValue: e.target.value })}
+            onSearchSubmit={this.handleSearchSubmit}
             placeholder="Write anything..."
             loading={loading}
           />
-          {error && (
-            <p className="error-message">
-              Oops! No robot wants to be called that name. <br /> Try with a
-              different name
-            </p>
-          )}
-          {!error && robotImgUrl && <Card imgSrc={robotImgUrl} />}
+          {imgUrl && <Card imgSrc={imgUrl} />}
         </div>
       </div>
     );

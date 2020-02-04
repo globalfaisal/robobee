@@ -1,11 +1,11 @@
-.form {
+.search-box {
 	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.form-controller {
+.search-box-control {
 	width: 100%;
 	height: 50px;
 	display: flex;
@@ -14,7 +14,7 @@
 	border: 2px solid var(--color-primary);
 }
 
-.input {
+.search-input {
 	width: 100%;
 	height: 100%;
 	padding: 16px;
@@ -27,18 +27,18 @@
 	font-family: 'Roboto Mono', Consolas, Monaco, monospace;
 }
 
-.input::placeholder {
+.search-input::placeholder {
 	font-weight: 400;
 	color: var(--color-gray);
 	letter-spacing: -1px;
 }
 
-.input:focus,
-.btn-submit:focus {
+.search-input:focus,
+.search-submit-btn:focus {
 	outline: none;
 }
 
-.btn-submit {
+.search-submit-btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -52,11 +52,11 @@
 	cursor: pointer;
 }
 
-.input-icon {
+.search-submit-icon {
 	font-size: 22px;
 }
 
-.form.loading .btn-submit > .input-icon {
+.search-box.loading .search-submit-btn > .search-submit-icon {
 	animation: arrow-jump-forward 1s ease-in-out infinite;
 }
 
