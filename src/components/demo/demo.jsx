@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SearchBox from '../search-box/search-box';
+
 import Card from '../card/card';
+import SearchBox from '../search-box/search-box';
 
-import './create-robot.css';
+import './demo.css';
 
-class CreateRobot extends Component {
+class Demo extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,7 +43,7 @@ class CreateRobot extends Component {
   render() {
     const { searchValue, imgUrl, loading } = this.state;
     return (
-      <div className="create-robot">
+      <section className="section-demo" id="section-demo">
         <div className="container">
           <div className="title">
             <FontAwesomeIcon icon="robot" className="title-icon" />
@@ -58,8 +59,8 @@ class CreateRobot extends Component {
           />
           {imgUrl && <Card imgSrc={imgUrl} />}
         </div>
-      </div>
+      </section>
     );
   }
 }
-export default CreateRobot;
+export default Demo;

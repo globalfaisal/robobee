@@ -1,7 +1,9 @@
 .card {
 	overflow: hidden;
-	background: linear-gradient(to bottom, #df8787, #ff5252);
-	border: 3px solid var(--color-primary);
+	background: linear-gradient(135deg, var(--color-primary), var(--color-purple));
+	border: 6px solid transparent;
+	border-image: linear-gradient(135deg, var(--color-pink), var(--color-primary));
+	border-image-slice: 1;
 	height: 380px;
 	width: 100%;
 	margin-top: 22px;

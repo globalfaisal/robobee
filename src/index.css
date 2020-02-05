@@ -1,14 +1,15 @@
 /*------- Base Styles -------*/
 :root {
 	--color-primary: #ff5252;
-	--color-primary-light: #facccc;
 	--color-secondary: #faedca;
 	--color-blue: #aff4f7;
-	--color-purple: #c3c4db;
+	--color-purple: #bd76ff;
+	--color-pink: #f5b8b8;
 
-	--color-lightgray: #7e7575dc;
+	--color-gray-main: #616161;
+	--color-gray-light: #a0a0a0;
+
 	--color-white: #fffffa;
-	--color-gray: #888888;
 	--color-black1: #24232b;
 	--color-black2: #282c34;
 }
@@ -28,17 +29,13 @@ body {
 	font-size: calc(1em + 0.08vw);
 	font-weight: 400;
 	line-height: 1.5;
-	color: var(--color-lightgray);
-	background-color: var(--color-black1);
+	color: var(--color-gray-main);
+	background-color: var(--color-white);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 section {
-	height: 100vh;
-	background: var(--color-white);
-	color: var(--color-black1);
-	overflow: hidden;
 	padding: 80px 0;
 }
 
