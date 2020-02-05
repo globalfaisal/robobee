@@ -3,6 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './footer.css';
+import GithubButton from '../../github-button/github-button';
 
 const Footer = () => (
   <footer>
@@ -21,6 +22,7 @@ const Footer = () => (
         Faisal Mohamoud
       </a>
     </small>
+    <GithubButton />
   </footer>
 );
 

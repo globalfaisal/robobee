@@ -1,0 +1,7 @@
+.github-button {
+	margin: 16px 0;
+}
+.github-button > span:nth-child(2) {
+	margin-left: 4px;
+	margin-right: 4px;
+}
