@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Robohash from 'react-robohash';
 
 import Card from '../card/card';
 import SearchBox from '../search-box/search-box';
@@ -11,7 +11,7 @@ class Demo extends Component {
   constructor() {
     super();
     this.state = {
-      imgUrl: '',
+      robohash: '',
       searchValue: '',
       loading: false,
     };
@@ -19,7 +19,7 @@ class Demo extends Component {
 
   componentDidMount() {
     this.setState({
-      imgUrl: 'https://robohash.org/skinnyRobot?size=300x300',
+      robohash: 'deafult',
       loading: false,
     });
   }
@@ -34,14 +34,14 @@ class Demo extends Component {
     this.setState({ loading: true });
     this.timeout = window.setTimeout(() => {
       this.setState({
-        imgUrl: `https://robohash.org/${searchValue}?size=300x300`,
+        robohash: searchValue,
         loading: false,
       });
-    }, 3000);
+    }, 2000);
   };
 
   render() {
-    const { searchValue, imgUrl, loading } = this.state;
+    const { searchValue, robohash, loading } = this.state;
     return (
       <section className="section-demo" id="section-demo">
         <div className="container">
@@ -54,7 +54,9 @@ class Demo extends Component {
             placeholder="Write anything..."
             loading={loading}
           />
-          {imgUrl && <Card imgSrc={imgUrl} />}
+          <Robohash name={robohash}>
+            {imgUrl => <Card imgSrc={imgUrl} />}
+          </Robohash>
         </div>
       </section>
     );
