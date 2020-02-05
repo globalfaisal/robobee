@@ -35,6 +35,9 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+main {
+	position: relative;
+}
 section {
 	padding: 80px 0;
 }

@@ -6,10 +6,7 @@ import './hero.css';
 
 const Hero = () => (
   <section className="section-hero">
-    <h2 className="heading">
-      Robots there’s more to
-      <br /> them than meets the eye.
-    </h2>
+    <h2 className="heading">Robots there’s more to them than meets the eye.</h2>
     <SectionLink targetSectionId="section-demo" />
   </section>
 );

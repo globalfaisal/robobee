@@ -45,10 +45,7 @@ class Demo extends Component {
     return (
       <section className="section-demo" id="section-demo">
         <div className="container">
-          <div className="title">
-            <FontAwesomeIcon icon="robot" className="title-icon" />
-            <h3 className="title">GENERATE UNIQUE ROBOTS</h3>
-          </div>
+          <h3 className="title">GENERATE UNIQUE ROBOTS</h3>
           <SearchBox
             type="search"
             value={searchValue}

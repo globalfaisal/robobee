@@ -25,7 +25,10 @@ const SectionLink = ({ targetSectionId, className }) => {
       onClick={scrollToSection}
       className={clsx('section-link ', className)}
     >
-      <FontAwesomeIcon icon="long-arrow-alt-down" size="2x" />
+      <FontAwesomeIcon
+        icon="long-arrow-alt-down"
+        className="section-link-icon"
+      />
     </Link>
   );
 };

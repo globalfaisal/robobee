@@ -2,34 +2,45 @@
 	position: absolute;
 	bottom: 50px;
 	left: 50%;
+	transform: translateX(-50%);
+
 	width: 50px;
 	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--color-black1);
-	background-color: var(--color-white);
+
+	background-color: #f5b8b836;
 	border-radius: 50%;
-	transform: translate(-50%);
-	animation: arrow-jump 1.5s infinite ease-in;
-}
-.section-link:hover {
+
 	cursor: pointer;
-	animation-play-state: paused;
-	box-shadow: 0 0px 10px 10px var(--color-lightgray);
+
+	overflow: hidden;
 }
 
-@keyframes arrow-jump {
+.section-link-icon {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	color: var(--color-pink);
+	font-size: 32px;
+	animation: drop-down 4s infinite ease-in;
+}
+
+@keyframes drop-down {
 	0% {
 		opacity: 0;
-		transform: translateY(0px);
+		transform: translate(-50%, -100%);
 	}
-	50% {
-		opacity: 0.8;
-		transform: translateY(5px);
+	33.3% {
+		opacity: 1;
+		transform: translate(-50%, 50%);
+	}
+	66.6% {
+		opacity: 1;
+		transform: translate(-50%, 50%);
 	}
 	100% {
 		opacity: 0;
-		transform: translateY(10px);
+		transform: translate(-50%, 200%);
 	}
 }

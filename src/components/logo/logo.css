@@ -1,0 +1,39 @@
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: var(--color-white);
+	margin: 8px;
+}
+
+.logo .logo-text {
+	margin-bottom: 0;
+	margin-left: 8px;
+
+	font-weight: 700;
+	font-size: 28px;
+	color: inherit;
+	letter-spacing: -3px;
+	text-transform: lowercase;
+}
+.logo .logo-icon {
+	margin-bottom: 3px;
+	font-size: 28px;
+}
+
+.logo.animate .logo-icon {
+	animation: spin 8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

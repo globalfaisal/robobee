@@ -17,7 +17,7 @@
 }
 
 .section-hero .heading {
-	margin-bottom: 50px;
-	align-self: flex-end;
 	color: var(--color-white);
+	max-width: 580px;
+	text-align: center;
 }
