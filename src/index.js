@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import {
+  faRobot,
+  faLongArrowAltRight,
+  faLongArrowAltDown,
+} from '@fortawesome/free-solid-svg-icons';
 
-import './assets/styles/main.css';
+import './index.css';
 
 import App from './App';
 
@@ -14,7 +18,7 @@ import history from './utils/history';
 import * as serviceWorker from './serviceWorker';
 
 // add all fontawesome solid icons to the library
-library.add(fas);
+library.add([faRobot, faLongArrowAltRight, faLongArrowAltDown]);
 
 ReactDOM.render(
   <Router history={history}>

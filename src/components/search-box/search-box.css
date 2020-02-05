@@ -11,7 +11,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid var(--color-primary);
+	border: 3px solid transparent;
+	border-image: linear-gradient(135deg, var(--color-primary), var(--color-purple));
+	border-image-slice: 1;
 }
 
 .search-input {
@@ -19,8 +21,8 @@
 	height: 100%;
 	padding: 16px;
 	font-size: 16px;
-	color: var(--color-gray);
-	background-color: var(--color-primary-light);
+	color: var(--color-gray-main);
+	background-color: var(--color-pink);
 	letter-spacing: -1px;
 	font-weight: 500;
 	border: none;
@@ -29,7 +31,7 @@
 
 .search-input::placeholder {
 	font-weight: 400;
-	color: var(--color-gray);
+	color: var(--color-gray-light);
 	letter-spacing: -1px;
 }
 
