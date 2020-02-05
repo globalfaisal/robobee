@@ -15,3 +15,9 @@ footer {
 	z-index: 1;
 	overflow: hidden;
 }
+footer .footer-text {
+	text-align: center;
+}
+footer .footer-text a:hover {
+	color: var(--color-gray-light);
+}

@@ -7,8 +7,15 @@ import GithubButton from '../../github-button/github-button';
 
 const Footer = () => (
   <footer>
-    <small>
-      Made with <FontAwesomeIcon icon="heart" /> in Sweden.
+    <small className=" footer-text">
+      Made with <FontAwesomeIcon icon="heart" /> by{' '}
+      <a
+        href="https://www.linkedin.com/in/faisal-mohamoud/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Faisal
+      </a>
     </small>
 
     <GithubButton />
