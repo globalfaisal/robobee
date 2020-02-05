@@ -7,6 +7,7 @@ import {
   faRobot,
   faLongArrowAltRight,
   faLongArrowAltDown,
+  faHeart,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './index.css';
@@ -18,7 +19,7 @@ import history from './utils/history';
 import * as serviceWorker from './serviceWorker';
 
 // add all fontawesome solid icons to the library
-library.add([faRobot, faLongArrowAltRight, faLongArrowAltDown]);
+library.add([faRobot, faLongArrowAltRight, faLongArrowAltDown, faHeart]);
 
 ReactDOM.render(
   <Router history={history}>

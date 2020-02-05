@@ -5,9 +5,9 @@ import SectionLink from '../section-link/section-link';
 import './hero.css';
 
 const Hero = () => (
-  <section className="section-hero">
+  <div className="hero">
     <h2 className="heading">Robots there’s more to them than meets the eye.</h2>
     <SectionLink targetSectionId="section-demo" />
-  </section>
+  </div>
 );
 export default Hero;

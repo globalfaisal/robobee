@@ -4,9 +4,12 @@ import Logo from '../../logo/logo';
 
 import './header.css';
 
-const Header = () => (
+const Header = ({ children }) => (
   <header>
-    <Logo animate />
+    <nav>
+      <Logo animate />
+    </nav>
+    {children}
   </header>
 );
 
