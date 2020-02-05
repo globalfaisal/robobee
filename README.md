@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">robobee</h2>
+  <h1 align="center">Robobee</h1>
   <p align="center">🤖 Generate unique robot images from any text</p>
 </p>
 
@@ -9,8 +9,9 @@ Here is a simple demo of [Robobee](https://robobee.netlify.com/)
 
 ## Author
 
-- Faisal M. <faisal.mohamoud89@gmail.com>
+- Faisal M. [@fsl_mo](https://twitter.com/fsl_mo)
 
 ## Resources
 
-This project uses SVG+JS Identicons based on [RoboHash](https://robohash.org).
+- [RoboHash](https://robohash.org)
+- [React Robohash](https://github.com/fel1xw/react-robohash)
