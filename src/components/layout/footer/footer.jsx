@@ -8,20 +8,9 @@ import GithubButton from '../../github-button/github-button';
 const Footer = () => (
   <footer>
     <small>
-      Made with <FontAwesomeIcon icon="heart" /> in Stockholm, Sweden.
+      Made with <FontAwesomeIcon icon="heart" /> in Sweden.
     </small>
 
-    <small>
-      Developed by{' '}
-      <a
-        href="https://github.com/fsl-mo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="author-link text-link "
-      >
-        Faisal Mohamoud
-      </a>
-    </small>
     <GithubButton />
   </footer>
 );
