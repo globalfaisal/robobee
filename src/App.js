@@ -6,13 +6,15 @@ import Header from './components/layout/header/header';
 import Footer from './components/layout/footer/footer';
 
 const App = () => (
-  <main role="main" className="main-wrapper">
+  <div className="app-wrapper">
     <Header>
       <Hero />
     </Header>
-    <Demo />
-    <Footer />
-  </main>
+    <main role="main" className="main-wrapper">
+      <Demo />
+      <Footer />
+    </main>
+  </div>
 );
 
 export default App;

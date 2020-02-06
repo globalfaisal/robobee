@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Robohash from 'react-robohash';
 
-import Card from '../card/card';
+import ImageCard from '../image-card/image-card';
 import SearchBox from '../search-box/search-box';
 
 import './demo.css';
@@ -44,8 +44,8 @@ class Demo extends Component {
     const { searchValue, robohash, loading } = this.state;
     return (
       <section className="section-demo" id="section-demo">
-        <div className="container">
-          <h3 className="title">GENERATE UNIQUE ROBOTS</h3>
+        <div className="content">
+          <h3 className="title">GENERATE UNIQUE ROBOTS FROM ANY TEXT</h3>
           <SearchBox
             type="search"
             value={searchValue}
@@ -54,8 +54,8 @@ class Demo extends Component {
             placeholder="Write anything..."
             loading={loading}
           />
-          <Robohash name={robohash}>
-            {imgUrl => <Card imgSrc={imgUrl} />}
+          <Robohash name={robohash} size={300}>
+            {imgUrl => <ImageCard src={imgUrl} alt={`Robobee-${robohash}`} />}
           </Robohash>
         </div>
       </section>
