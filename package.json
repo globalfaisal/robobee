@@ -2,6 +2,11 @@
 	"name": "robobee",
 	"version": "0.1.0",
 	"private": true,
+	"author": {
+		"name": "Faisal M.",
+		"email": "faisal.mohamoud89@gmail.com",
+		"url": "https://robobee.netlify.com"
+	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.27",
 		"@fortawesome/free-solid-svg-icons": "^5.12.1",
