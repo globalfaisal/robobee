@@ -6,11 +6,14 @@
 	height: 100%;
 	width: 100%;
 
+	padding: 22px;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	background-image: linear-gradient(to top, #24232bdc, #f5b8b8de), url('../../assets/images/hero-bg.jpg');
+	background-image: linear-gradient(to top, #24232bdc, #f5b8b8de),
+		url('../../assets/images/hero-bg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

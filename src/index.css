@@ -37,6 +37,9 @@ body {
 
 main {
 	position: relative;
+	min-height: 100vh;
+	background: var(--color-black1);
+	color: var(--color-gray-light);
 }
 section {
 	padding: 80px 40px;

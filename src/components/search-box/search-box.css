@@ -1,5 +1,6 @@
 .search-box {
 	height: 50px;
+	max-width: 400px;
 
 	display: flex;
 	justify-content: center;
@@ -10,7 +11,7 @@
 	position: relative;
 	width: 100%;
 	height: 50px;
-
+	background-color: var(--color-pink);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -25,7 +26,8 @@
 	padding: 16px;
 
 	color: var(--color-gray-main);
-	background-color: var(--color-pink);
+	background: transparent;
+	border-radius: 0;
 	border: none;
 
 	font-size: 16px;
