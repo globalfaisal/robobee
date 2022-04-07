@@ -9,8 +9,8 @@ const GithubButton = () => (
     <GitHubButton
       data-icon="octicon-follow"
       data-size="large"
-      href="https://github.com/fsl-mo"
-      aria-label="Follow fsl-mo/robobee on GitHub"
+      href="https://github.com/globalfaisal"
+      aria-label="Follow globalfaisal/robobee on GitHub"
     >
       Follow
     </GitHubButton>
@@ -19,7 +19,7 @@ const GithubButton = () => (
       data-icon="octicon-star"
       data-size="large"
       href="https://github.com/fsl-mo/robobee"
-      aria-label="Star fsl-mo/robobee on GitHub"
+      aria-label="Star globalfaisal/robobee on GitHub"
     >
       Star
     </GitHubButton>
@@ -27,8 +27,8 @@ const GithubButton = () => (
     <GitHubButton
       data-icon="octicon-repo-forked"
       data-size="large"
-      href="https://github.com/fsl-mo/robobee/fork"
-      aria-label="Fork fsl-mo/robobee on GitHub"
+      href="https://github.com/globalfaisal/robobee/fork"
+      aria-label="Fork globalfaisal/robobee on GitHub"
     >
       Fork
     </GitHubButton>
